@@ -1,29 +1,4 @@
-@import url(
-    'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap'
-);
-
-
-/* =========================
-   VARIABLES
-========================= */
-
-:root {
-
-    --red: #c62828;
-
-    --red-dark: #8f1717;
-
-    --cream: #f6f0e5;
-
-    --paper: #fffaf0;
-
-    --black: #171515;
-
-    --gray: #77716b;
-
-    --border: #ded5c8;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap');
 
 
 /* =========================
@@ -31,44 +6,20 @@
 ========================= */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
 
 body {
-
-    background: var(--cream);
-
-    color: var(--black);
-
-    font-family:
-        "IBM Plex Sans Thai",
-        sans-serif;
-
+    font-family: 'Noto Sans Thai', sans-serif;
+    background: #f7f3ed;
+    color: #171717;
     line-height: 1.7;
-
-}
-
-
-a {
-
-    color: inherit;
-
-    text-decoration: none;
-
 }
 
 
@@ -77,83 +28,61 @@ a {
 ========================= */
 
 header {
-
-    height: 80px;
-
-    padding:
-        0 max(
-            30px,
-            calc((100% - 1150px) / 2)
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    border-bottom:
-        1px solid var(--border);
-
-    background:
-        rgba(246, 240, 229, .95);
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 100;
-
-    backdrop-filter: blur(10px);
-
+    width: 100%;
+    border-bottom: 1px solid #ddd6cc;
+    background: #f7f3ed;
 }
 
+.navbar {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .logo {
-
-    font-family:
-        "Noto Sans SC",
-        sans-serif;
-
-    font-size: 30px;
-
-    font-weight: 900;
-
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-
-.logo span {
-
-    color: var(--red);
-
-}
-
-
-nav {
-
+.nav-links {
     display: flex;
-
-    gap: 30px;
-
+    gap: 35px;
 }
 
-
-nav a {
-
-    color: #777;
-
+.nav-links a {
+    color: #222;
+    text-decoration: none;
     font-size: 14px;
-
-    transition: .25s;
-
+    position: relative;
+    transition: 0.3s;
 }
 
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #b42025;
+    transition: 0.3s;
+}
 
-nav a:hover,
-nav a.active {
+.nav-links a:hover,
+.nav-links a.active {
+    color: #b42025;
+}
 
-    color: var(--red);
-
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 
@@ -162,127 +91,74 @@ nav a.active {
 ========================= */
 
 .hero {
-
-    width:
-        min(
-            1150px,
-            calc(100% - 50px)
-        );
-
-    min-height: 680px;
-
+    width: 90%;
+    max-width: 1250px;
+    min-height: 650px;
     margin: auto;
 
     display: grid;
-
-    grid-template-columns:
-        1.2fr .8fr;
-
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-
-    gap: 80px;
-
+    gap: 70px;
 }
 
-
-.label {
-
-    color: var(--red);
-
+.small-title,
+.label,
+.section-heading p,
+.page-header p {
+    color: #b42025;
     font-size: 12px;
-
     font-weight: 700;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
-
+    letter-spacing: 3px;
 }
-
 
 .hero h1 {
-
-    font-family:
-        "Noto Sans SC",
-        "IBM Plex Sans Thai",
-        sans-serif;
-
-    font-size:
-        clamp(55px, 8vw, 100px);
-
-    line-height: 1.05;
-
-    font-weight: 900;
-
-    margin-bottom: 30px;
-
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.1;
+    margin: 20px 0;
 }
-
 
 .hero h1 span {
-
-    color: var(--red);
-
+    color: #b42025;
 }
 
-
-.description {
-
-    max-width: 650px;
-
-    color: var(--gray);
-
-    font-size: 18px;
-
-    margin-bottom: 35px;
-
+.hero-description {
+    max-width: 600px;
+    color: #666;
+    font-size: 16px;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.buttons {
-
+.hero-buttons {
     display: flex;
-
-    gap: 12px;
-
+    gap: 15px;
+    margin-top: 35px;
 }
 
-
-.button {
-
-    padding: 13px 23px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 50px;
-
-    transition: .25s;
-
+.btn {
+    padding: 13px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-
-.button:hover {
-
-    transform: translateY(-3px);
-
-    border-color: var(--red);
-
-}
-
-
-.button.red {
-
-    background: var(--red);
-
+.btn.primary {
+    background: #b42025;
     color: white;
+}
 
-    border-color: var(--red);
+.btn.primary:hover {
+    background: #8e181c;
+}
 
+.btn.secondary {
+    border: 1px solid #222;
+    color: #222;
+}
+
+.btn.secondary:hover {
+    background: #222;
+    color: white;
 }
 
 
@@ -291,64 +167,34 @@ nav a.active {
 ========================= */
 
 .hero-image {
-
-    height: 430px;
-
     position: relative;
-
 }
-
 
 .hero-image img {
-
     width: 100%;
-
-    height: 100%;
-
+    max-width: 470px;
+    height: 550px;
     object-fit: cover;
-
-    border-radius: 250px 250px 20px 20px;
-
-    border:
-        8px solid var(--paper);
-
-    box-shadow:
-        0 20px 50px rgba(0,0,0,.12);
-
+    display: block;
 }
 
-
-/* ตัวอักษรจีนตกแต่ง */
-
-.chinese-character {
-
+.chinese-mark {
     position: absolute;
-
     right: -25px;
-
     bottom: -30px;
 
     width: 120px;
-
     height: 120px;
 
-    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    background: #b42025;
     color: white;
 
-    border-radius: 50%;
-
-    display: grid;
-
-    place-items: center;
-
-    font-family:
-        "Noto Sans SC";
-
+    font-family: serif;
     font-size: 65px;
-
-    font-weight: 900;
-
 }
 
 
@@ -357,286 +203,53 @@ nav a.active {
 ========================= */
 
 .intro {
+    width: 90%;
+    max-width: 1250px;
+    margin: 100px auto;
+}
 
-    width:
-        min(
-            1150px,
-            calc(100% - 50px)
-        );
+.section-heading {
+    margin-bottom: 45px;
+}
 
-    margin: auto;
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-top: 8px;
+}
 
-    padding: 70px 0;
-
-    border-top:
-        1px solid var(--border);
-
+.intro-grid {
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 60px;
-
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-
-.number {
-
-    color: var(--red);
-
-    font-size: 13px;
-
+.intro-card {
+    background: white;
+    padding: 35px;
+    border: 1px solid #e5dfd7;
+    transition: 0.3s;
 }
 
-
-.intro h2 {
-
-    font-family:
-        "Noto Sans SC";
-
-    font-size: 40px;
-
-    margin-top: 10px;
-
+.intro-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.07);
 }
 
-
-.intro p {
-
-    color: var(--gray);
-
-    font-size: 18px;
-
+.icon {
+    color: #b42025;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-
-/* =========================
-   PAGE
-========================= */
-
-.page {
-
-    width:
-        min(
-            1150px,
-            calc(100% - 50px)
-        );
-
-    margin: auto;
-
-    padding: 90px 0;
-
+.intro-card h3 {
+    margin-bottom: 10px;
 }
 
-
-.page-title {
-
-    margin-bottom: 70px;
-
-}
-
-
-.page-title h1 {
-
-    font-family:
-        "Noto Sans SC",
-        "IBM Plex Sans Thai";
-
-    font-size:
-        clamp(55px, 8vw, 90px);
-
-    line-height: 1;
-
-    margin-bottom: 25px;
-
-}
-
-
-.page-title > p:last-child {
-
-    color: var(--gray);
-
-    font-size: 18px;
-
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 70px;
-
-    align-items: center;
-
-}
-
-
-.about-image {
-
-    height: 550px;
-
-}
-
-
-.about-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    border-radius: 20px;
-
-}
-
-
-.about-text h2 {
-
-    font-size: 32px;
-
-    margin: 15px 0 25px;
-
-}
-
-
-.about-text p {
-
-    color: var(--gray);
-
-    margin-bottom: 20px;
-
-}
-
-
-.hanzi {
-
-    font-family:
-        "Noto Sans SC";
-
-    color: var(--red);
-
-    font-size: 50px;
-
-    font-weight: 900;
-
-}
-
-
-.skills {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 30px;
-
-}
-
-
-.skills span,
-.project-tags span {
-
-    padding: 8px 15px;
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 30px;
-
-    color: var(--red);
-
-    font-family:
-        "Noto Sans SC";
-
-}
-
-
-/* =========================
-   PROJECT
-========================= */
-
-.project-image {
-
-    width: 100%;
-
-    height: 550px;
-
-    margin-bottom: 60px;
-
-}
-
-
-.project-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    border-radius: 25px;
-
-}
-
-
-.project-content {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 80px;
-
-}
-
-
-.project-content h2 {
-
-    font-size: 35px;
-
-    margin-bottom: 20px;
-
-}
-
-
-.project-content p {
-
-    color: var(--gray);
-
-    margin-bottom: 20px;
-
-}
-
-
-.big {
-
-    font-size: 90px;
-
-}
-
-
-.project-tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 30px;
-
+.intro-card p {
+    color: #666;
+    font-size: 14px;
 }
 
 
@@ -644,41 +257,273 @@ nav a.active {
    QUOTE
 ========================= */
 
-.quote {
-
-    margin-top: 80px;
-
-    padding: 50px;
-
-    background: var(--red);
-
+.quote-section {
+    background: #191919;
     color: white;
-
-    border-radius: 20px;
-
-    font-family:
-        "Noto Sans SC";
-
-    font-size: 30px;
-
+    padding: 100px 10%;
     text-align: center;
+}
 
+.quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 50px);
+}
+
+.quote span {
+    color: #c5282e;
+    font-size: 70px;
+}
+
+.quote-section p {
+    color: #aaa;
+    margin-top: 20px;
 }
 
 
-.quote small {
+/* =========================
+   PAGE HEADER
+========================= */
 
-    display: block;
+.page-header {
+    min-height: 350px;
 
-    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    font-family:
-        "IBM Plex Sans Thai";
+    text-align: center;
 
-    font-size: 14px;
+    border-bottom: 1px solid #ddd6cc;
+}
 
-    opacity: .8;
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 1;
+    margin: 15px 0;
+}
 
+.page-header span {
+    font-family: serif;
+    color: #b42025;
+    font-size: 24px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.25;
+    margin: 15px 0 25px;
+}
+
+.about-content p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
+}
+
+.timeline {
+    border-left: 1px solid #ccc;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+
+    padding: 30px 0 30px 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 40px;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+    background: #b42025;
+}
+
+.timeline-number {
+    font-family: 'Playfair Display', serif;
+    color: #b42025;
+    font-size: 25px;
+}
+
+.timeline-item h3 {
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    color: #666;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 60px;
+}
+
+.skill h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.skill-bar {
+    height: 5px;
+    background: #ddd;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #b42025;
+}
+
+
+/* =========================
+   PROJECT
+========================= */
+
+.project-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.project-image {
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.image-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    padding: 15px 25px;
+
+    background: #b42025;
+    color: white;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.project-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 1.15;
+    margin: 15px 0 25px;
+}
+
+.project-content > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.project-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.project-content ul {
+    padding-left: 20px;
+    color: #666;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.tags span {
+    border: 1px solid #ccc;
+    padding: 5px 12px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection {
+    background: white;
+    text-align: center;
+    padding: 100px 15%;
+}
+
+.reflection h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.3;
+    margin: 15px 0 25px;
+}
+
+.reflection p:last-child {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
 }
 
 
@@ -686,127 +531,96 @@ nav a.active {
    CONTACT
 ========================= */
 
-.contact-card {
-
-    background: var(--paper);
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 25px;
-
-    padding: 60px;
+.contact-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 100px auto;
 
     display: grid;
-
-    grid-template-columns: 180px 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
 }
 
-
-.contact-character {
-
-    width: 180px;
-
-    height: 180px;
-
-    border-radius: 50%;
-
-    background: var(--red);
-
-    color: white;
-
-    display: grid;
-
-    place-items: center;
-
-    font-family:
-        "Noto Sans SC";
-
-    font-size: 90px;
-
-    font-weight: 900;
-
+.contact-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    line-height: 1.2;
+    margin: 15px 0 25px;
 }
 
-
-.contact-card h2 {
-
-    font-size: 32px;
-
-    margin-bottom: 15px;
-
+.contact-text > p:last-child {
+    color: #666;
 }
 
-
-.contact-card p {
-
-    color: var(--gray);
-
-}
-
-
-.email {
-
-    display: inline-block;
-
-    margin: 25px 0;
-
-    color: var(--red);
-
-    font-size: 25px;
-
-    font-weight: 700;
-
-}
-
-
-.social {
-
+.contact-list {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.contact-item {
+    display: flex;
+    align-items: center;
     gap: 20px;
 
+    padding: 20px;
+
+    background: white;
+    border: 1px solid #e5dfd7;
 }
 
+.contact-icon {
+    width: 50px;
+    height: 50px;
 
-.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    color: var(--gray);
+    background: #b42025;
+    color: white;
 
+    font-size: 13px;
+    font-weight: 700;
 }
 
+.contact-item small {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
 
-.social a:hover {
-
-    color: var(--red);
-
+.contact-item p {
+    font-size: 14px;
 }
 
 
 /* =========================
-   BACK
+   CONTACT MESSAGE
 ========================= */
 
-.back {
-
-    display: inline-block;
-
-    margin-top: 50px;
-
-    color: var(--gray);
-
+.contact-message {
+    background: #191919;
+    color: white;
+    padding: 100px 15%;
+    text-align: center;
 }
 
+.chinese-big {
+    color: #b42025;
+    font-family: serif;
+    font-size: 80px;
+    margin-bottom: 10px;
+}
 
-.back:hover {
+.contact-message h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
 
-    color: var(--red);
-
+.contact-message p {
+    color: #aaa;
+    margin-top: 15px;
 }
 
 
@@ -815,173 +629,108 @@ nav a.active {
 ========================= */
 
 footer {
-
-    padding: 35px;
-
-    text-align: center;
-
+    background: #111;
     color: #888;
-
-    border-top:
-        1px solid var(--border);
-
-    font-size: 13px;
-
-}
-
-
-footer span {
-
-    color: var(--red);
-
-    font-family:
-        "Noto Sans SC";
-
-    margin-right: 10px;
-
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
 }
 
 
 /* =========================
-   MOBILE
+   RESPONSIVE
 ========================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
-
-    header {
-
-        padding: 0 20px;
-
+    .navbar {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
     }
 
-
-    nav {
-
-        gap: 12px;
-
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
-
-    nav a {
-
-        font-size: 11px;
-
-    }
-
 
     .hero {
-
-        width: 90%;
-
         grid-template-columns: 1fr;
-
         padding: 70px 0;
-
-        gap: 50px;
-
     }
-
-
-    .hero h1 {
-
-        font-size: 55px;
-
-    }
-
 
     .hero-image {
-
-        height: 350px;
-
+        max-width: 500px;
+        margin: auto;
     }
 
-
-    .intro {
-
-        width: 90%;
-
+    .intro-grid {
         grid-template-columns: 1fr;
-
-        gap: 20px;
-
     }
 
-
-    .page {
-
-        width: 90%;
-
-        padding: 60px 0;
-
+    .about-section,
+    .project-section,
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
     }
 
+    .skills {
+        grid-template-columns: 1fr;
+    }
 
-    .page-title h1 {
+    .project-image img {
+        height: 450px;
+    }
 
+    .contact-section {
+        gap: 50px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .page-header {
+        min-height: 280px;
+    }
+
+    .page-header h1 {
         font-size: 55px;
-
     }
 
-
-    .about-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
+    .about-content h2,
+    .project-content h2,
+    .contact-text h2 {
+        font-size: 35px;
     }
 
-
-    .about-image {
-
-        height: 400px;
-
+    .reflection h2 {
+        font-size: 30px;
     }
 
-
-    .project-image {
-
-        height: 350px;
-
+    .hero-image img {
+        height: 420px;
     }
 
-
-    .project-content {
-
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
+    .chinese-mark {
+        width: 90px;
+        height: 90px;
+        font-size: 45px;
+        right: -10px;
+        bottom: -15px;
     }
 
-
-    .contact-card {
-
-        grid-template-columns: 1fr;
-
-        padding: 35px;
-
+    .hero-buttons {
+        flex-direction: column;
     }
 
-
-    .contact-character {
-
-        width: 130px;
-
-        height: 130px;
-
-        font-size: 60px;
-
+    .btn {
+        text-align: center;
     }
-
-
-    .quote {
-
-        padding: 35px 20px;
-
-        font-size: 23px;
-
-    }
-
 }
