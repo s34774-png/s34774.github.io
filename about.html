@@ -1,155 +1,177 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>About Me | 中文学习</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
 <header>
+    <nav class="navbar">
+        <div class="logo">MY PORTFOLIO</div>
 
-    <div class="logo">
-        汉<span>。</span>
-    </div>
-
-
-    <nav>
-
-        <a href="index.html">
-            首页
-        </a>
-
-        <a href="about.html" class="active">
-            关于我
-        </a>
-
-        <a href="project.html">
-            我的作品
-        </a>
-
-        <a href="contact.html">
-            联系我
-        </a>
-
+        <div class="nav-links">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="about.html" class="active">เกี่ยวกับฉัน</a>
+            <a href="project.html">ผลงาน</a>
+            <a href="contact.html">ติดต่อ</a>
+        </div>
     </nav>
-
 </header>
 
 
+<main>
 
-<main class="page">
-
-
-    <div class="page-title">
-
-        <p class="label">
-            ABOUT ME
-        </p>
-
-        <h1>
-            关于我
-        </h1>
-
-        <p>
-            ทำความรู้จักกับฉัน
-            และเส้นทางการเรียนภาษาจีน
-        </p>
-
-    </div>
+    <section class="page-header">
+        <p>GET TO KNOW ME</p>
+        <h1>เกี่ยวกับฉัน</h1>
+        <span>关于我</span>
+    </section>
 
 
-
-    <section class="about-grid">
-
+    <!-- PROFILE -->
+    <section class="about-section">
 
         <div class="about-image">
-
-            <img
-                src="images/chinese.jpg"
-                alt="การเรียนภาษาจีน"
-            >
-
+            <!-- ใส่รูปกิจกรรมหรือรูปตัวเอง -->
+            <img src="images/activity.jpg" alt="กิจกรรม">
         </div>
 
+        <div class="about-content">
 
-        <div class="about-text">
-
-            <span class="hanzi">
-                学习
-            </span>
+            <p class="label">MY STORY</p>
 
             <h2>
-                ฉันกำลังเรียนรู้ภาษาจีน
+                มากกว่าการเรียนภาษา<br>
+                คือการได้เรียนรู้โลกที่กว้างขึ้น
             </h2>
 
             <p>
-
-                ปัจจุบันฉันกำลังเรียนภาษาจีน
-                และสนใจทั้งด้านภาษา
-                การออกเสียง คำศัพท์
-                ไวยากรณ์ และวัฒนธรรมจีน
-
+                ฉันเป็นนักเรียนสายศิลป์-จีนที่มีความสนใจ
+                ในด้านภาษาและวัฒนธรรม โดยเลือกเรียนสายนี้
+                เพราะต้องการพัฒนาทักษะการสื่อสารและเปิดโอกาส
+                ให้ตัวเองได้เรียนรู้สิ่งใหม่ ๆ
             </p>
 
             <p>
-
-                สิ่งที่ฉันชอบที่สุดในการเรียนจีน
-                คือการได้เห็นว่าตัวอักษรหนึ่งตัว
-                สามารถมีความหมายและเรื่องราว
-                ที่น่าสนใจมากมาย
-
+                การเรียนภาษาจีนทำให้ฉันได้ฝึกทั้งการอ่าน
+                การเขียน การฟัง และการพูด รวมถึงได้เรียนรู้
+                เกี่ยวกับวัฒนธรรมและวิถีชีวิตของผู้คน
+                ซึ่งเป็นประสบการณ์ที่แตกต่างจากการเรียนในห้องเรียนทั่วไป
             </p>
 
-
-            <div class="skills">
-
-                <span>汉字</span>
-
-                <span>词汇</span>
-
-                <span>语法</span>
-
-                <span>听力</span>
-
-                <span>口语</span>
-
-            </div>
-
         </div>
-
 
     </section>
 
 
-    <a href="index.html" class="back">
-        ← กลับหน้าแรก
-    </a>
+    <!-- EDUCATION -->
+    <section class="timeline-section">
 
+        <div class="section-heading">
+            <p>MY JOURNEY</p>
+            <h2>เส้นทางการเรียนรู้</h2>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-number">01</div>
+
+                <div>
+                    <h3>เริ่มต้นเรียนสายศิลป์-จีน</h3>
+                    <p>
+                        เริ่มต้นเรียนรู้ภาษาจีนอย่างจริงจัง
+                        และทำความเข้าใจพื้นฐานด้านภาษา
+                        รวมถึงวัฒนธรรมจีน
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <div class="timeline-number">02</div>
+
+                <div>
+                    <h3>พัฒนาทักษะด้านภาษา</h3>
+                    <p>
+                        ฝึกการฟัง พูด อ่าน และเขียน
+                        ผ่านทั้งการเรียนในห้องเรียน
+                        การทำงานกลุ่ม และกิจกรรมต่าง ๆ
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="timeline-item">
+                <div class="timeline-number">03</div>
+
+                <div>
+                    <h3>ค้นหาความสนใจของตัวเอง</h3>
+                    <p>
+                        นอกจากภาษาแล้ว ยังได้ค้นพบความสนใจ
+                        ในด้านการสื่อสาร การออกแบบ
+                        และการสร้างผลงานต่าง ๆ
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills-section">
+
+        <div class="section-heading">
+            <p>MY SKILLS</p>
+            <h2>ทักษะที่ฉันมี</h2>
+        </div>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>ภาษาจีน</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>ภาษาอังกฤษ</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>การสื่อสาร</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h3>การทำงานเป็นทีม</h3>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
 
-
 <footer>
-
-    © 2026 My Chinese Portfolio
-
+    <p>© 2026 My Portfolio | Chinese Language Program</p>
 </footer>
-
 
 </body>
 </html>
