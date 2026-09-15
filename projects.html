@@ -3,91 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project | My Portfolio</title>
+    <title>Projects | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <nav class="navbar">
+    <nav>
+        <a href="index.html" class="logo">PORTFOLIO<span>.</span></a>
 
-        <div class="logo">MY PORTFOLIO</div>
-
-        <div class="nav-links">
-            <a href="index.html">หน้าหลัก</a>
+        <div class="menu">
+            <a href="index.html">หน้าแรก</a>
             <a href="about.html">เกี่ยวกับฉัน</a>
-            <a href="project.html" class="active">ผลงาน</a>
+            <a href="projects.html" class="active">ผลงาน</a>
             <a href="contact.html">ติดต่อ</a>
         </div>
-
     </nav>
 </header>
 
 
 <main>
 
-    <section class="page-header">
-        <p>MY PROJECT</p>
-        <h1>ผลงานของฉัน</h1>
-        <span>我的作品</span>
+    <section class="page-title">
+        <p>02 / MY WORK</p>
+        <h1>ผลงาน<span>.</span></h1>
     </section>
 
 
-    <!-- PROJECT -->
-    <section class="project-section">
+    <!-- WORK 1 -->
+    <section class="project" id="work1">
 
         <div class="project-image">
+            <img src="images/work1.jpg" alt="ผลงานที่หนึ่ง">
 
-            <!-- ใส่รูปผลงานตรงนี้ -->
-            <img src="images/project.jpg" alt="ผลงานของฉัน">
-
-            <div class="image-caption">
-                PROJECT 01
+            <div class="project-number">
+                01
             </div>
-
         </div>
 
 
-        <div class="project-content">
+        <div class="project-info">
 
-            <p class="label">PROJECT 01</p>
+            <p class="red-label">PROJECT 01</p>
 
-            <h2>
-                ผลงานกิจกรรม<br>
-                สายศิลป์-จีน
-            </h2>
+            <h2>ผลงานที่หนึ่ง</h2>
 
-            <p>
-                ผลงานชิ้นนี้เป็นส่วนหนึ่งของกิจกรรมที่ได้ทำ
-                ระหว่างการเรียนในสายศิลป์-จีน
-                โดยเป็นการนำความรู้และทักษะที่เรียนมา
-                ประยุกต์ใช้ในการทำงานจริง
+            <p class="project-type">
+                กิจกรรม / การเรียนรู้
             </p>
 
-            <h3>สิ่งที่ฉันได้ทำ</h3>
-
-            <ul>
-                <li>วางแผนและเตรียมเนื้อหาสำหรับผลงาน</li>
-                <li>ค้นคว้าข้อมูลที่เกี่ยวข้อง</li>
-                <li>ออกแบบและจัดทำผลงาน</li>
-                <li>ทำงานร่วมกับสมาชิกในกลุ่ม</li>
-                <li>นำเสนอผลงานต่อผู้อื่น</li>
-            </ul>
-
-            <h3>สิ่งที่ได้รับ</h3>
-
             <p>
-                ได้ฝึกความรับผิดชอบ การทำงานร่วมกับผู้อื่น
-                การจัดการเวลา รวมถึงได้พัฒนาความมั่นใจ
-                ในการนำเสนอผลงาน
+                ใส่รายละเอียดเกี่ยวกับผลงานชิ้นนี้ตรงนี้
+                เช่น เป็นกิจกรรมอะไร ทำขึ้นเพื่ออะไร
+                และมีส่วนร่วมกับงานอย่างไร
             </p>
 
-            <div class="tags">
-                <span>ภาษาจีน</span>
-                <span>กิจกรรม</span>
-                <span>การนำเสนอ</span>
-                <span>Teamwork</span>
+            <div class="project-details">
+
+                <div>
+                    <span>หน้าที่</span>
+                    <strong>ผู้จัดทำ / สมาชิก</strong>
+                </div>
+
+                <div>
+                    <span>ทักษะ</span>
+                    <strong>การสื่อสาร / Teamwork</strong>
+                </div>
+
+                <div>
+                    <span>ปี</span>
+                    <strong>2026</strong>
+                </div>
+
+            </div>
+
+            <div class="project-result">
+                <h3>สิ่งที่ได้รับ</h3>
+
+                <p>
+                    ได้ฝึกการทำงานร่วมกับผู้อื่น
+                    การแก้ไขปัญหาเฉพาะหน้า
+                    และการรับผิดชอบหน้าที่ของตัวเอง
+                </p>
             </div>
 
         </div>
@@ -95,22 +93,66 @@
     </section>
 
 
-    <!-- REFLECTION -->
-    <section class="reflection">
+    <!-- WORK 2 -->
+    <section class="project reverse" id="work2">
 
-        <p class="label">MY EXPERIENCE</p>
+        <div class="project-image">
+            <img src="images/work2.jpg" alt="ผลงานที่สอง">
 
-        <h2>
-            “ทุกผลงานไม่ได้วัดแค่ผลลัพธ์<br>
-            แต่ยังวัดจากสิ่งที่เราได้เรียนรู้”
-        </h2>
+            <div class="project-number">
+                02
+            </div>
+        </div>
 
-        <p>
-            ประสบการณ์จากการทำผลงานชิ้นนี้ทำให้ฉันได้เรียนรู้ว่า
-            การทำงานที่ดีไม่ได้เกิดจากคนเพียงคนเดียว
-            แต่เกิดจากการร่วมมือ การรับฟังความคิดเห็น
-            และการช่วยกันแก้ปัญหา
-        </p>
+
+        <div class="project-info">
+
+            <p class="red-label">PROJECT 02</p>
+
+            <h2>ผลงานที่สอง</h2>
+
+            <p class="project-type">
+                ผลงานสร้างสรรค์ / โปรเจกต์
+            </p>
+
+            <p>
+                ใส่รายละเอียดเกี่ยวกับผลงานชิ้นที่สอง
+                เช่น แนวคิดของผลงาน ขั้นตอนการทำงาน
+                รวมถึงสิ่งที่ตัวเองรับผิดชอบ
+            </p>
+
+            <div class="project-details">
+
+                <div>
+                    <span>หน้าที่</span>
+                    <strong>ผู้จัดทำ / สมาชิก</strong>
+                </div>
+
+                <div>
+                    <span>ทักษะ</span>
+                    <strong>Creative / Design</strong>
+                </div>
+
+                <div>
+                    <span>ปี</span>
+                    <strong>2026</strong>
+                </div>
+
+            </div>
+
+            <div class="project-result">
+
+                <h3>สิ่งที่ได้รับ</h3>
+
+                <p>
+                    ได้ฝึกความคิดสร้างสรรค์
+                    การวางแผน และการนำความรู้
+                    มาประยุกต์ใช้กับการทำผลงาน
+                </p>
+
+            </div>
+
+        </div>
 
     </section>
 
@@ -118,7 +160,8 @@
 
 
 <footer>
-    <p>© 2026 My Portfolio | Chinese Language Program</p>
+    <div class="footer-logo">PORTFOLIO<span>.</span></div>
+    <p>Student Portfolio — ศิลป์-จีน</p>
 </footer>
 
 </body>
